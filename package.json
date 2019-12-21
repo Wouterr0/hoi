@@ -1,0 +1,24 @@
+{
+  "name": "hoi-nodejs",
+  "version": "1.0.0",
+  "description": "A very basic frontend-backend application and makes use of express, ajax and jQuery",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wouterr0/hoi-NodeJS.git"
+  },
+  "author": "Wouter de Ruiter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wouterr0/hoi-NodeJS/issues"
+  },
+  "homepage": "https://github.com/Wouterr0/hoi-NodeJS#readme"
+}
