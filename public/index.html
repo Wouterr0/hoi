@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Mijn lijpe website</title>
+	<meta name="description" content="Lijpe website">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+	</script>
+
+	<link rel="stylesheet" href="/style.css" />
+	<script src="/client.js" defer></script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>Lijp</h1>
+		<div id="input">
+			Naam:
+			<input type="text" id="hoiBox">
+			<button id="hoiButton" onclick="hoi(document.getElementById('hoiBox').value)">hoi</button>
+		</div>
+		<p/>
+			<div id="hoiText"></div>
+	</div>
+</body>
+
+</html>
