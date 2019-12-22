@@ -28,8 +28,14 @@ app.use(express.static('/public'))
 app.get('/hoi', (req, res) => {
   console.log(`params = ${JSON.stringify(req.query)}`);
   if (typeof req.query.text !== "undefined") {
-    console.log(`text = ${req.query.text}`);
-    res.send(`${sanitize(req.query.text)}`);
+    let d = new Date();
+
+    let time = [d.getHours(), d.getMinutes(), d.getSeconds()]
+    for (i = 0; i < time.length; i++) {
+      time[i] = ((time[i].toString().length === 2) ? '' : '0') + time[i];
+    }
+    console.log(`time = ${JSON.stringify(time)}`)
+    res.send(sanitize(req.query.text + " om " + time.join(':')));
   } else {
     res.send("Please specify text parameter");
   }
