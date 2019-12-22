@@ -50,7 +50,7 @@ app.get('/hoi', (req, res) => {
 
 
 function sanitize(input) {
-  result = input.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;').replace("'", '&#x27;').replace('/', '&#x2F;');
+  result = input.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;').replace(/\//g, '&#x2F;');
   console.log(`sanitizing input ${input} to ${result}`);
   return result;
 }
