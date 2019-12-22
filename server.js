@@ -11,9 +11,18 @@ app.use(express.static("public"));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", (req, res) => {
-  response.sendFile(`${__dirname}/public/index.html`);
+  res.sendFile(`${__dirname}/index.html`);
 });
 
+// app.get("/style.css", (req, res) => {
+//   res.sendFile(`${__dirname}/style.css`);
+// });
+
+// app.get("/client.js", (req, res) => {
+//   res.sendFile(`${__dirname}/client.js`);
+// });
+
+app.use(express.static('/public'))
 
 
 app.get('/hoi', (req, res) => {

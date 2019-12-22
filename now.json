@@ -1,0 +1,36 @@
+{
+	"name": "hoi-NodeJS",
+	"version": 2,
+	"builds": [
+		{
+			"src": "server.js",
+			"use": "@now/node-server"
+		},
+		{
+			"src": "public/*",
+			"use": "@now/static"
+		}
+	],
+	"routes": [
+		{
+			"src": "/",
+			"dest": "/server.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/hoi",
+			"dest": "/server.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/style.css",
+			"dest": "/public/style.css",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/client.js",
+			"dest": "/public/client.js",
+			"methods": ["GET"]
+		}
+	]
+}
