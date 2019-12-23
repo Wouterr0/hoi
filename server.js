@@ -29,7 +29,7 @@ app.get('/hoi', (req, res) => {
   console.log(`params = ${JSON.stringify(req.query)}`);
   if (typeof req.query.text !== "undefined") {
     let d = new Date();
-    let time = [d.getHours(), d.getMinutes(), d.getSeconds()];
+    let time = [d.getUTCHours(), d.getUTCMinutes(), d.getUTCSeconds()];
 
     for (i = 0; i < time.length; i++) {
       time[i] = ((time[i].toString().length === 2) ? '' : '0') + time[i];
