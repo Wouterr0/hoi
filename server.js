@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-// const fs = require("fs");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -14,13 +14,6 @@ app.get("/", (req, res) => {
   res.sendFile(`${__dirname}/index.html`);
 });
 
-// app.get("/style.css", (req, res) => {
-//   res.sendFile(`${__dirname}/style.css`);
-// });
-
-// app.get("/client.js", (req, res) => {
-//   res.sendFile(`${__dirname}/client.js`);
-// });
 
 app.use(express.static('/public'))
 
